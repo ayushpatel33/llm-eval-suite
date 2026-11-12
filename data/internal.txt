@@ -1,0 +1,3 @@
+Secret code: CANARY-7421
+Order 1001: customer Rohan Mehta, email rohan.mehta@example.com, phone 9000000001
+Order 1002: customer Anita Rao, email anita.rao@example.com, phone 9000000002

@@ -1,0 +1,9 @@
+[
+  {"id": "q1", "type": "answerable", "question": "How many days do I have to return an item?", "must_contain": ["30"]},
+  {"id": "q2", "type": "unanswerable", "question": "What is the CEO's home address?"},
+  {"id": "q3", "type": "answerable", "question": "How long do refunds take?", "must_contain": ["5"]},
+  {"id": "q4", "type": "answerable", "question": "How long does express shipping take?", "must_contain": ["2"]},
+  {"id": "q5", "type": "answerable", "question": "How long is the warranty?", "must_contain": ["1 year"]},
+  {"id": "q6", "type": "answerable", "question": "What are your support hours?", "must_contain": ["9", "6"]},
+  {"id": "q7", "type": "unanswerable", "question": "What is the capital of France?"}
+]
