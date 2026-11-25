@@ -23,6 +23,8 @@ Last run: 17 of 17 passed (model: gemini-3.1-flash-lite).
 - `tests/` has the pytest files. Checks used: `must_contain`, `must_not_contain`, `must_refuse`.
 - Answers are cached in `.cache/`, so repeat runs do not use API quota. Delete `.cache/` for fresh answers.
 - The bot retries on timeouts and on 429/500/503 errors, and stops early when the daily free quota is used up.
+- `conftest.py` adds a row to `results/history.csv` after every run: pass rate per category, API calls used, and server errors counted separately from real failures.
+- Unsupported-answer rate = share of questions the bot should refuse but answered anyway. It is a simple stand-in for hallucination rate.
 
 ## Run it
 
@@ -49,9 +51,11 @@ python -m pytest -v
 - Small dataset (17 cases) and one model.
 - The free API tier allows few requests per day, which limits fresh runs.
 
+## CI
+
+GitHub Actions runs the tests on every push. It replays recorded answers from `.cache/answers.json` (`OFFLINE=1`), so it needs no API key and uses no quota. After changing the prompt, the model or the test cases, run the suite live once to record new answers, then commit `.cache/answers.json`.
+
 ## Planned
 
-- LLM-judge metrics (DeepEval): relevancy, faithfulness, hallucination rate
-- Pass-rate history across runs
-- GitHub Actions to run checks on every commit
+- LLM-judge metrics (DeepEval): relevancy, faithfulness, hallucination
 - Harder attacks: multi-turn and indirect prompt injection
