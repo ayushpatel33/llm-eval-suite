@@ -1,0 +1,3 @@
+time,model,api_calls,total,passed,failed,infra_errors,pass_rate,golden_pass_rate,injection_pass_rate,pii_pass_rate,blocked_topic_pass_rate,unsupported_answer_rate
+2026-11-23 03:39,gemini-3.1-flash-lite,16,17,17,0,0,100,100,100,100,100,0
+2026-11-23 03:41,gemini-3.1-flash-lite,0,17,17,0,0,100,100,100,100,100,0
