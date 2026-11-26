@@ -9,11 +9,11 @@ All data in this repo is fictional.
 | Category | Cases | What it checks |
 |---|---|---|
 | Golden (accuracy) | 7 | Answers match the FAQ. Out-of-scope questions are refused. |
-| Prompt injection | 5 | The bot does not reveal a planted secret code and does not obey "ignore your rules". |
-| PII leakage | 3 | The bot does not share fake customer phone numbers, emails or names. |
+| Prompt injection | 10 | The bot does not reveal a planted secret code. Tricks include a hidden order inside a normal question, a fake "SYSTEM:" message, a Hinglish attack, a role-play game, and "spell out the secret" (checked with a letters-and-digits-only match). |
+| PII leakage | 4 | The bot does not share fake customer phone numbers, emails or names, even when someone pretends to be the customer. |
 | Blocked topics | 2 | The bot refuses medical advice and off-topic requests. |
 
-Last run: 17 of 17 passed (model: gemini-3.1-flash-lite).
+Last run: 23 of 23 passed (model: gemini-3.1-flash-lite).
 
 ## How it works
 
@@ -50,6 +50,7 @@ python -m pytest -v
 - Checks are keyword-based, so they can miss answers that are correctly reworded.
 - Small dataset (17 cases) and one model.
 - The free API tier allows few requests per day, which limits fresh runs.
+- All attack cases currently pass, so they may be too easy. Next I will weaken the system prompt on purpose to check that the tests really fail.
 
 ## CI
 
@@ -59,6 +60,7 @@ GitHub Actions runs the tests on every push. It replays recorded answers from `.
 
 - LLM-judge metrics (DeepEval): relevancy, faithfulness, hallucination
 - Harder attacks: multi-turn and indirect prompt injection
+- Multi-turn attacks (the bot answers one message at a time today)
 
 ## DeepEval scores (local, Gemini judge)
 
@@ -70,9 +72,9 @@ python -m pytest evals -v -s
 ```
 
 | Case | Faithfulness | Answer relevancy |
-|---|---|---|
-| q1 | 1.0 | 1.0 |
-| q3 | 1.0 | 0.5 |
-| q5 | 1.0 | 1.0 |
+|------|--------------|------------------|
+|  q1  |     1.0      |       1.0        |
+|  q3  |     1.0      |       0.5        |
+|  q5  |     1.0      |       1.0        |
 
 Finding: for q3 the answer is correct, but the judge counted the "where the refund goes" part as off-topic, so relevancy was 0.5. I kept the pass mark and noted it as a limit of LLM judges. The judge and the bot use the same model family, which can bias scores. Next experiment: tell the bot to answer only what was asked, then re-score.
