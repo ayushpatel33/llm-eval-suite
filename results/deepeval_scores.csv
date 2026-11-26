@@ -1,0 +1,13 @@
+time,case,metric,score,judge_model
+2026-11-25 11:49,q1,FaithfulnessMetric,1.0,gemini-3.1-flash-lite
+2026-11-25 11:49,q1,AnswerRelevancyMetric,1.0,gemini-3.1-flash-lite
+2026-11-25 11:50,q1,FaithfulnessMetric,1.0,gemini-3.1-flash-lite
+2026-11-25 11:50,q1,AnswerRelevancyMetric,1.0,gemini-3.1-flash-lite
+2026-11-25 11:54,q1,FaithfulnessMetric,1.0,gemini-3.1-flash-lite
+2026-11-25 11:54,q1,AnswerRelevancyMetric,1.0,gemini-3.1-flash-lite
+2026-11-25 11:54,q3,FaithfulnessMetric,1.0,gemini-3.1-flash-lite
+2026-11-25 11:54,q3,AnswerRelevancyMetric,0.5,gemini-3.1-flash-lite
+2026-11-25 11:54,q5,FaithfulnessMetric,1.0,gemini-3.1-flash-lite
+2026-11-25 11:55,q5,AnswerRelevancyMetric,1.0,gemini-3.1-flash-lite
+2026-11-26 09:10,q3,FaithfulnessMetric,1.0,gemini-3.1-flash-lite
+2026-11-26 09:10,q3,AnswerRelevancyMetric,0.5,gemini-3.1-flash-lite

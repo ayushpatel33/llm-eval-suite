@@ -1,0 +1,15 @@
+{
+  "c662bc1ab917b682ee2fd63ea608c69d9963fb538e7a6ce1a7d113ce84c10457": "{\n  \"truths\": [\n    \"Items can be returned within 30 days of delivery.\",\n    \"Returned items must be unused.\",\n    \"Refunds are issued to the original payment method.\",\n    \"Refunds are processed within 5 business days after the item is received.\",\n    \"Standard shipping takes 3 to 5 days.\",\n    \"Express shipping takes 1 to 2 days.\",\n    \"Support hours are Monday to Saturday, 9 AM to 6 PM IST.\",\n    \"All products have a 1 year warranty.\"\n  ]\n}",
+  "30eedc1fb2d8f3e96251f5ac1eb031fa782a0ec866122ca17f2eef6a56467919": "{\n  \"claims\": [\n    \"Items can be returned within 30 days of delivery.\",\n    \"Items must be unused to be returned.\"\n  ]\n}",
+  "f734011a4accd7e2db15b30a6400583418b6514d955a3012c5fd04c0c208def3": "{\n  \"verdicts\": [\n    {\n      \"verdict\": \"yes\"\n    },\n    {\n      \"verdict\": \"yes\"\n    }\n  ]\n}",
+  "11c5e144bf287d918c782b5d7440f0e0159a99cc34702e86141f38e0c1e10055": "{\n  \"statements\": [\n    \"You can return items within 30 days of delivery.\",\n    \"Items must be unused.\"\n  ]\n}",
+  "ee47f1d4c0bd47270b90a79a6207a40b646ba9161f2673ac30b2ca7f6620f15c": "{\n  \"verdicts\": [\n    {\n      \"verdict\": \"yes\"\n    },\n    {\n      \"reason\": \"While this is a condition for a return, it does not directly answer the question about the timeframe for returns.\",\n      \"verdict\": \"borderline\"\n    }\n  ]\n}",
+  "8d55579e5aa75076734bc54fe63fbb2103bb2c3b76d712e3ccb9199addaf2355": "{\n  \"claims\": [\n    \"Refunds are processed to the original payment method within 5 business days after the item is received.\"\n  ]\n}",
+  "2fabfa28cfae159eb5f3d5861a9ea1b0fac779b495744015d58a6c864cdd8d29": "{\n  \"verdicts\": [\n    {\n      \"verdict\": \"yes\"\n    }\n  ]\n}",
+  "d25970ca8f001ffc6c9f7243d037f7ccb880b3b6692f2880d0fde5b3e48db720": "{\n  \"statements\": [\n    \"Refunds are issued to the original payment method.\",\n    \"Refunds are processed within 5 business days after the item is received.\"\n  ]\n}",
+  "186cbbb323dfda742d1c74d2efbc11092aad94c25f40234e7452e02ce8e55477": "{\n  \"verdicts\": [\n    {\n      \"reason\": \"This statement explains the method of refund, not the duration requested by the user.\",\n      \"verdict\": \"no\"\n    },\n    {\n      \"verdict\": \"yes\"\n    }\n  ]\n}",
+  "e74489774f61053da64ca819e74c66c900a2ced7941b840f60dd26b0b9a41c2a": "{\n  \"claims\": [\n    \"All products have a 1 year warranty.\"\n  ]\n}",
+  "31aab108274465fe4ff53bf3d29dcf555aac319af41cc9fde9f53746dcd09a33": "{\n  \"verdicts\": [\n    {\n      \"verdict\": \"yes\"\n    }\n  ]\n}",
+  "e6a72bcc10eb3cac0faa5efea58eef80abeb64d8dda499c11acce5458f23677a": "{\n  \"statements\": [\n    \"All products have a 1 year warranty.\"\n  ]\n}",
+  "2f202a9af51fb6d2f55a1800aa93296cae674c731f966455008240aaecbf3007": "{\n  \"verdicts\": [\n    {\n      \"verdict\": \"yes\"\n    }\n  ]\n}"
+}

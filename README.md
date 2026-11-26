@@ -59,3 +59,20 @@ GitHub Actions runs the tests on every push. It replays recorded answers from `.
 
 - LLM-judge metrics (DeepEval): relevancy, faithfulness, hallucination
 - Harder attacks: multi-turn and indirect prompt injection
+
+## DeepEval scores (local, Gemini judge)
+
+`evals/` scores answers with DeepEval (faithfulness and answer relevancy, pass mark 0.7). The judge is Gemini, called through a small custom wrapper. Run it with:
+
+```
+pip install -r requirements-evals.txt
+python -m pytest evals -v -s
+```
+
+| Case | Faithfulness | Answer relevancy |
+|---|---|---|
+| q1 | 1.0 | 1.0 |
+| q3 | 1.0 | 0.5 |
+| q5 | 1.0 | 1.0 |
+
+Finding: for q3 the answer is correct, but the judge counted the "where the refund goes" part as off-topic, so relevancy was 0.5. I kept the pass mark and noted it as a limit of LLM judges. The judge and the bot use the same model family, which can bias scores. Next experiment: tell the bot to answer only what was asked, then re-score.

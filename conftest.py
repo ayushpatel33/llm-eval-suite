@@ -46,6 +46,8 @@ def _pass_rate(statuses):
 
 
 def pytest_runtest_logreport(report):
+    if not report.nodeid.startswith("tests/"):
+        return  # only the main tests go into history.csv
     if report.when != "call":
         return
     text = str(report.longrepr) if report.failed else ""
